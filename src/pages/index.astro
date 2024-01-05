@@ -1,7 +1,7 @@
 ---
 import "@fontsource-variable/inter";
-import Compatibility from "~/components/compatibility.astro";
-import Features from "~/components/features.astro";
+import Skills from "~/components/skills.astro";
+import Cv from "~/components/cv.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
@@ -23,7 +23,7 @@ const description =
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
 
-    <title>Pablo Menor de Oñate</title>
+    <title>Pablo Menor</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
@@ -65,8 +65,8 @@ const description =
     <Splash />
     <div class="space-y-24 px-8 py-32">
       <Intro />
-      <Features />
-      <Compatibility />
+      <Cv />
+      <Skills />
       <Showcase />
     </div>
     <Footer />
