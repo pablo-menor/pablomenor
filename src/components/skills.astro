@@ -5,38 +5,48 @@ import type { CompatibilityItem } from "~/types";
 
 const frameworks: Array<CompatibilityItem> = [
   {
-    title: "React",
-    icon: "frameworks/react",
-    url: "https://reactjs.org/",
-  },
-  {
-    title: "Preact",
-    icon: "frameworks/preact",
-    url: "https://preactjs.com/",
-  },
-  {
-    title: "Svelte",
-    icon: "frameworks/svelte",
-    url: "https://svelte.dev/",
-  },
-  {
     title: "Vue",
     icon: "frameworks/vue",
     url: "https://vuejs.org/",
   },
   {
-    title: "Solid",
-    icon: "frameworks/solid",
-    url: "https://www.solidjs.com/",
+    title: "Angular",
+    icon: "frameworks/angular",
+    url: "https://angular.dev/",
   },
   {
-    title: "Lit",
-    icon: "frameworks/lit",
-    url: "https://lit.dev/",
+    title: "Astro",
+    icon: "logomark",
+    url: "https://astro.build/",
+  },
+  {
+    title: "React",
+    icon: "frameworks/react",
+    url: "https://reactjs.org/",
+  },
+  {
+    title: "Streamlit",
+    icon: "frameworks/streamlit",
+    url: "https://streamlit.io/",
+  },
+  {
+    title: "Node.js",
+    icon: "frameworks/node",
+    url: "https://nodejs.org/en",
   },
 ];
 
 const platforms: Array<CompatibilityItem> = [
+  {
+    title: "Azure",
+    icon: "platforms/azure",
+    url: "https://azure.microsoft.com/en-us/products/",
+  },
+  {
+    title: "OpenAI",
+    icon: "platforms/openai",
+    url: "https://pages.cloudflare.com/",
+  },
   {
     title: "Netlify",
     icon: "platforms/netlify",
@@ -48,11 +58,6 @@ const platforms: Array<CompatibilityItem> = [
     url: "https://vercel.com/",
   },
   {
-    title: "Cloudflare",
-    icon: "fa-brands:cloudflare",
-    url: "https://pages.cloudflare.com/",
-  },
-  {
     title: "Render",
     icon: "platforms/render",
     url: "https://render.com/",
@@ -62,28 +67,24 @@ const platforms: Array<CompatibilityItem> = [
     icon: "fa-brands:github",
     url: "https://pages.github.com/",
   },
-  {
-    title: "GitLab",
-    icon: "fa-brands:gitlab",
-    url: "https://docs.gitlab.com/ee/user/project/pages/",
-  },
 ];
 ---
 
 <ContentSection title="Skills" id="skills">
   <Fragment slot="lead">
-    Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
+    <!-- Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
     <span class="text-primary">framework</span>
-     and deploy to your favorite <span class="text-primary">platform</span>.
+     and deploy to your favorite <span class="text-primary">platform</span>. -->
+     Here are a few  <span class="text-primary">technologies</span> I’ve been <span class="text-primary">working</span> with recently
   </Fragment>
   <CompatibilityList
     items={frameworks}
-    title="Frameworks"
+    title="Front & Backend"
     url="https://docs.astro.build/core-concepts/framework-components/"
   />
   <CompatibilityList
     items={platforms}
-    title="Platforms"
+    title="Others"
     url="https://docs.astro.build/guides/deploy/"
   />
 </ContentSection>
