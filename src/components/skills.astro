@@ -19,11 +19,11 @@ const frameworks: Array<CompatibilityItem> = [
     icon: "logomark",
     url: "https://astro.build/",
   },
-  {
-    title: "React",
-    icon: "frameworks/react",
-    url: "https://reactjs.org/",
-  },
+  // {
+  //   title: "React",
+  //   icon: "frameworks/react",
+  //   url: "https://reactjs.org/",
+  // },
   {
     title: "Streamlit",
     icon: "frameworks/streamlit",
@@ -33,6 +33,11 @@ const frameworks: Array<CompatibilityItem> = [
     title: "Node.js",
     icon: "frameworks/node",
     url: "https://nodejs.org/en",
+  },
+    {
+    title: "MongoDB",
+    icon: "frameworks/mongodb",
+    url: "https://www.mongodb.com/es",
   },
 ];
 
@@ -45,7 +50,12 @@ const platforms: Array<CompatibilityItem> = [
   {
     title: "OpenAI",
     icon: "platforms/openai",
-    url: "https://pages.cloudflare.com/",
+    url: "https://openai.com/",
+  },
+  {
+    title: "Snowflake",
+    icon: "platforms/snowflake",
+    url: "https://www.snowflake.com/en/",
   },
   {
     title: "Netlify",
@@ -56,11 +66,6 @@ const platforms: Array<CompatibilityItem> = [
     title: "Vercel",
     icon: "platforms/vercel",
     url: "https://vercel.com/",
-  },
-  {
-    title: "Render",
-    icon: "platforms/render",
-    url: "https://render.com/",
   },
   {
     title: "GitHub",
@@ -84,7 +89,7 @@ const platforms: Array<CompatibilityItem> = [
   />
   <CompatibilityList
     items={platforms}
-    title="Others"
+    title="Cloud & AI"
     url="https://docs.astro.build/guides/deploy/"
   />
 </ContentSection>
