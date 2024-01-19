@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
+
 ---
 
 <ContentSection title="Hello there!" id="intro">
@@ -12,17 +13,17 @@ import ContentSection from "~/components/content-section.astro";
      performance meets <span class="text-primary">powerful</span> developer
     experience. -->
     I use my <span class="text-primary">passion</span> and <span class="text-primary">skills</span> to build <span class="text-primary">great software</span>.
-    <br/><br/>Currently based in Madrid, Spain.
+    <br/><br/>Currently based in <span class="text-primary">Madrid</span>, Spain.
 
     
   </Fragment>
   <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
     <a
-      href="https://docs.astro.build/"
+      href="mailto:pablomenordeonate@gmail.com"
       class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
     >
-      <Icon pack="mdi" name="telescope" class="h-8" />
-      <span>Read the docs</span>
+      <Icon pack="mdi" name="email-outline" class="h-8" />
+      <span>Contact me</span>
     </a>
     <a
       href="https://astro.new/"
@@ -33,3 +34,4 @@ import ContentSection from "~/components/content-section.astro";
     </a>
   </div>
 </ContentSection>
+
