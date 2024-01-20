@@ -1,6 +1,6 @@
 ---
 import ContentSection from "~/components/content-section.astro";
-
+import CvSwitch from "~/components/cv-switcher.vue";
 ---
 <ContentSection title="Experience" id="experience">
   <Fragment slot="lead">
@@ -9,4 +9,5 @@ import ContentSection from "~/components/content-section.astro";
      and deploy to your favorite <span class="text-primary">platform</span>. -->
      Here are a few  <span class="text-primary">technologies</span> I’ve been <span class="text-primary">working</span> with recently
   </Fragment>
+  <CvSwitch client:load></CvSwitch>
 </ContentSection>
