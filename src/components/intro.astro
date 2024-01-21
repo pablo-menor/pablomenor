@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
+import ConfettyBtn from "./confetty-btn.vue";
 
 ---
 
@@ -20,18 +21,19 @@ import ContentSection from "~/components/content-section.astro";
   <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
     <a
       href="mailto:pablomenordeonate@gmail.com"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+      class="intro-btn flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
     >
       <Icon pack="mdi" name="email-outline" class="h-8" />
       <span>Contact me</span>
     </a>
-    <a
-      href="https://astro.new/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon pack="mdi" name="rocket" class="h-8" />
-      <span>Try it out</span>
-    </a>
+    <ConfettyBtn client:load></ConfettyBtn>
   </div>
 </ContentSection>
 
+
+<style scoped>
+  a:hover {
+    color: #ffffff;
+  }
+
+</style>

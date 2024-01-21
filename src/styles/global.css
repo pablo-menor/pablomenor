@@ -10,3 +10,12 @@ a,
   @apply bg-clip-text text-transparent;
   @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
 }
+
+
+.intro-btn {
+  position: relative;
+} 
+
+.intro-btn:hover{
+color: #818CF8 !important;
+}
