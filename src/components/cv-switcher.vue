@@ -56,7 +56,7 @@ const calculateTime = (year, month) => {
     <p  class="mt-5">{{ selectedComany.description }}</p>
 
     <footer class="mt-7">
-      <ul class="flex gap-5">
+      <ul class="flex flex-wrap gap-5">
         <li class="bg-white text-black px-3 rounded-2xl shadow-sm shadow-[#E347C0]" 
         v-for="tag in selectedComany.tags" v-bind:key="tag">
           {{ tag }}
