@@ -1,13 +1,17 @@
 <script setup>
 import { log } from 'node_modules/astro/dist/core/logger/core'
 import { ref, onMounted } from 'vue'
+import cvData from 'src/assets/cv-data.json' 
 
+// New values shold be added at the beginning of the array, same in the cv-data.json file
 const tabs = ['EY',  'Card-Dynamics', 'NTT Data' ]
 
 const selectedTab = ref(0)
+const selectedComany = ref(cvData[0])
 
 const changeTab = (index) => {
   selectedTab.value = index
+  selectedComany.value = cvData[selectedTab.value]
 }
 
 const calculateTime = (year, month) => {
@@ -29,6 +33,7 @@ const calculateTime = (year, month) => {
   }
 }
 
+
 </script>
 
 <template>
@@ -42,12 +47,22 @@ const calculateTime = (year, month) => {
   </div>
 
   <!-- TABS CONTENT -->
-  <article class="bg-[#1F2937] w-[100%] mt-2 border-2 
-    border-solid border-[#353E4B] p-5 px-7" >
-    <h1 class="text-center ">Software Developer <span class="text-[#64FFDA]">@ EY Artificial Intelligence Center</span></h1>
-    <h3 class="text-sm text-[#d1d1d1] mt-2">October 2022 - Present: {{ calculateTime(2022, 9) }}</h3>
+  <article  
+  class="bg-[#1F2937] w-[100%] mt-2 border-2 border-solid border-[#353E4B] p-5 px-7" >
+    <h1 class="text-center ">{{ selectedComany.role }} <span class="text-[#64FFDA]">@ {{ selectedComany.company_name }}</span></h1>
+    <h3 v-if="selectedComany.active" class="text-sm text-[#d1d1d1] mt-2">{{ selectedComany.start_month }} {{ selectedComany.start_year }} - Present: {{ calculateTime(selectedComany.start_year, selectedComany.start_month_index) }}</h3>
+    <h3 v-if="!selectedComany.active" class="text-sm text-[#d1d1d1] mt-2">{{ selectedComany.start_month }} {{ selectedComany.start_year }} - {{ selectedComany.end_month }} {{ selectedComany.end_year }}: {{ selectedComany.time_worked }}</h3>
 
-    <p  class="mt-5">Working with an international team, I collaborate on projects that involve OpenAI services (Generative AI), document-intelligence and developing data-driven applications. I am currently in the Digital Emerging Technologies team, delivering advanced technological solutions.</p>
+    <p  class="mt-5">{{ selectedComany.description }}</p>
+
+    <footer class="mt-7">
+      <ul class="flex gap-5">
+        <li class="bg-white text-black px-3 rounded-2xl shadow-sm shadow-[#E347C0]" 
+        v-for="tag in selectedComany.tags" v-bind:key="tag">
+          {{ tag }}
+        </li>
+      </ul>
+    </footer>
   </article>
 
 </template>

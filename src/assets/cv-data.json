@@ -1,0 +1,41 @@
+[
+  {
+    "company_name": "EY Artificial Intelligence Center",
+    "role": "Software Developer",
+    "active": true,
+    "start_year": 2022,
+    "start_month": "November",
+    "start_month_index": 10,
+    "end_year": null,
+    "end_month": null,
+    "time_worked": null,
+    "description": " Working with an international team, I collaborate on projects that involve OpenAI services (Generative AI), document-intelligence and developing data-driven applications. I am currently in the Digital Emerging Technologies team, delivering advanced technological solutions.",
+    "tags": ["GenAI", "Angular","Azure", "Node.js","Python", "Streamlit"]
+  },
+  {
+    "company_name": "Card-Dynamics",
+    "role": "Full Stack Developer",
+    "active": false,
+    "start_year": 2022,
+    "start_month": "September",
+    "start_month_index": null,
+    "end_year": 2022,
+    "end_month": "November",
+    "time_worked": "2 months",
+    "description": "Main developer for a platform that enabled the company's commercial team to create custom demos for the different products, with specific configurations for potencial clients.",
+    "tags": ["Angular", "ReactJS", "Node.js","TypeScript", "MySQL"]
+  },
+  {
+    "company_name": "NTT Data",
+    "role": "Software Developer Intern",
+    "active": false,
+    "start_year": 2022,
+    "start_month": "March",
+    "start_month_index": null,
+    "end_year": 2022,
+    "end_month": "June",
+    "time_worked": "4 months",
+    "description": "Developer for an asset-tracking platform, with IoT and blockchain integration, working with TypeScript/Angular and Java Spring Boot  with MongoDB.",
+    "tags": ["Angular", "Java Spring Boot", "TypeScript", "MongoDB"]
+  }
+]
