@@ -1,0 +1,106 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "Vue",
+    icon: "frameworks/vue",
+    url: "https://vuejs.org/",
+  },
+  {
+    title: "Angular",
+    icon: "frameworks/angular",
+    url: "https://angular.dev/",
+  },
+  {
+    title: "React JS",
+    icon: "frameworks/react",
+    url: "https://reactjs.org/",
+  },
+  // {
+  //   title: "Streamlit",
+  //   icon: "frameworks/streamlit",
+  //   url: "https://streamlit.io/",
+  // },
+  // {
+  //   title: "Astro",
+  //   icon: "frameworks/react",
+  //   url: "https://astro.build/",
+  // },
+  {
+    title: "FastAPI",
+    icon: "frameworks/fastapi",
+    url: "https://fastapi.tiangolo.com/",
+  },
+  {
+    title: "Node.js",
+    icon: "frameworks/node",
+    url: "https://nodejs.org/en",
+  },
+    {
+    title: "MongoDB",
+    icon: "frameworks/mongodb",
+    url: "https://www.mongodb.com/es",
+  },
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "Azure",
+    icon: "platforms/azure",
+    url: "https://azure.microsoft.com/en-us/products/",
+  },
+  {
+    title: "OpenAI",
+    icon: "platforms/openai",
+    url: "https://openai.com/",
+  },
+  {
+    title: "Watsonx.ai",
+    icon: "platforms/ibm-logo",
+    url: "https://www.ibm.com/products/watsonx-ai",
+  },
+  {
+    title: "Snowflake",
+    icon: "platforms/snowflake",
+    url: "https://www.snowflake.com/en/",
+  },
+  {
+    title: "Netlify",
+    icon: "platforms/netlify",
+    url: "https://www.netlify.com/",
+  },
+  {
+    title: "Vercel",
+    icon: "platforms/vercel",
+    url: "https://vercel.com/",
+  },
+  // {
+  //   title: "GitHub",
+  //   icon: "fa-brands:github",
+  //   url: "https://pages.github.com/",
+  // },
+
+];
+---
+
+<ContentSection title="Tech stack" id="tech">
+  <Fragment slot="lead">
+    <!-- Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
+    <span class="text-primary">framework</span>
+     and deploy to your favorite <span class="text-primary">platform</span>. -->
+     Here are a few  <span class="text-primary">technologies</span> I’ve been <span class="text-primary">working</span> with recently
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Front & Backend"
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    items={platforms}
+    title="Cloud & AI"
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>

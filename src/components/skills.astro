@@ -1,95 +1,67 @@
 ---
-import CompatibilityList from "~/components/compatibility-list.astro";
+import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
-import type { CompatibilityItem } from "~/types";
+import type { FeatureItem } from "~/types";
 
-const frameworks: Array<CompatibilityItem> = [
+const features: Array<FeatureItem> = [
   {
-    title: "Vue",
-    icon: "frameworks/vue",
-    url: "https://vuejs.org/",
+    title: "Bring Your Own Framework",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    icon: "mdi:handshake",
   },
   {
-    title: "Angular",
-    icon: "frameworks/angular",
-    url: "https://angular.dev/",
+    title: "100% Static HTML, No JS",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+    icon: "mdi:feather",
   },
   {
-    title: "Astro",
-    icon: "logomark",
-    url: "https://astro.build/",
-  },
-  // {
-  //   title: "React",
-  //   icon: "frameworks/react",
-  //   url: "https://reactjs.org/",
-  // },
-  {
-    title: "Streamlit",
-    icon: "frameworks/streamlit",
-    url: "https://streamlit.io/",
+    title: "On-Demand Components",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.",
+    icon: "mdi:directions-fork",
   },
   {
-    title: "Node.js",
-    icon: "frameworks/node",
-    url: "https://nodejs.org/en",
-  },
-    {
-    title: "MongoDB",
-    icon: "frameworks/mongodb",
-    url: "https://www.mongodb.com/es",
-  },
-];
-
-const platforms: Array<CompatibilityItem> = [
-  {
-    title: "Azure",
-    icon: "platforms/azure",
-    url: "https://azure.microsoft.com/en-us/products/",
+    title: "Broad Integration",
+    description:
+      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
+    icon: "mdi:graph",
   },
   {
-    title: "OpenAI",
-    icon: "platforms/openai",
-    url: "https://openai.com/",
+    title: "SEO Enabled",
+    description:
+      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.",
+    icon: "mdi:search-web",
   },
   {
-    title: "Snowflake",
-    icon: "platforms/snowflake",
-    url: "https://www.snowflake.com/en/",
-  },
-  {
-    title: "Netlify",
-    icon: "platforms/netlify",
-    url: "https://www.netlify.com/",
-  },
-  {
-    title: "Vercel",
-    icon: "platforms/vercel",
-    url: "https://vercel.com/",
-  },
-  {
-    title: "GitHub",
-    icon: "fa-brands:github",
-    url: "https://pages.github.com/",
+    title: "Community",
+    description:
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+    icon: "mdi:account-group",
   },
 ];
 ---
 
 <ContentSection title="Skills" id="skills">
   <Fragment slot="lead">
-    <!-- Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
-    <span class="text-primary">framework</span>
-     and deploy to your favorite <span class="text-primary">platform</span>. -->
-     Here are a few  <span class="text-primary">technologies</span> I’ve been <span class="text-primary">working</span> with recently
+    <!-- Astro comes <span class="text-primary">batteries included</span>. It takes
+    the best parts of
+    <span class="text-primary">state-of-the-art</span>
+     tools and adds its own <span class="text-primary">innovations</span>. -->
+    These are some of the <span class="text-primary">key competencies</span> I bring to the table.
   </Fragment>
-  <CompatibilityList
-    items={frameworks}
-    title="Front & Backend"
-    url="https://docs.astro.build/core-concepts/framework-components/"
-  />
-  <CompatibilityList
-    items={platforms}
-    title="Cloud & AI"
-    url="https://docs.astro.build/guides/deploy/"
-  />
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
 </ContentSection>
